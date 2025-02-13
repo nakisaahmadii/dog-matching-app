@@ -1,0 +1,250 @@
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-wrap: wrap;
+    height: 800px;
+   
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    background-color: #f4f4f4 ;
+    padding: 50px;
+    box-shadow: 3px 3px 20px rgba(0,0,0,0.2);
+}
+
+.login-container input,
+.login-container button {
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    
+}
+
+.logout-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.form-label {
+    align-self: flex-start; 
+    margin: 0px;
+}
+
+.input-error{
+    border-color: #e3342f;
+    background-color: #fcebea;
+}
+
+.title{
+    text-align: center;
+    color: #5e6c44d7;
+    margin-bottom: 50px;
+}
+
+.search-container{
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.filters {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    font-size: larger;
+    color: #007bff;
+}
+
+.error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+}
+
+.fa-spinner {
+    color: #007bff;  
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td{
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #dce6f8;
+    color: #333;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f3f1f1;
+}
+
+.error-message {
+    color: #f44336;
+    margin: 0 0 0 50px;
+    
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%; /* Full width to make it responsive */
+    padding: 10px; /* Padding for better text visibility */
+    margin-bottom: 20px; /* Space between inputs */
+    border: 2px solid #ccc; /* Subtle border */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Border-box model for proper width calculation */
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s; /* Smooth transition for hover effect */
+}
+button:hover {
+    background-color: #0056b3;; /* Darker blue on hover */
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.generate-match-btn {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #dc3545;
+    color: white;
+    float: right;
+}
+
+.generate-match-btn:hover {
+    background-color: #b32836 ;
+}
+
+.fixed-size-image {
+    width: 150px;  /* Fixed width */
+    height: 100px; /* Fixed height */
+    object-fit: cover; /* This property makes sure the images cover the area without distortion */
+}
+
+.favorite-button {
+    background: none;
+    border: none;
+    color: red; /* Heart color */
+    cursor: pointer;
+}
+  
+.favorite-button:hover {
+    opacity: 0.7;
+    background-color: transparent;
+    color: #e50000;
+}
+
+.modal {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    overflow: auto;
+}
+
+.modal-title {
+    color: #b32836;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-close:hover {
+    background-color: transparent;
+}
+  
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.filters select, .filters button {
+    padding: 8px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+  
+.user-button {
+    background: none;
+    border: none;
+    color: blue;
+    font-size: 16px;
+    cursor: pointer;
+}
+  
+  
+.logout-btn {
+    color: #007bff;
+    padding: 12px 16px;
+    text-decoration: none;
+    background-color: transparent;
+    
+}
+  
+.logout-btn:hover {
+    color: #0056b3;
+    background-color: transparent;
+}
+
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;    
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
