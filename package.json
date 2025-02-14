@@ -2,6 +2,7 @@
   "name": "dog-matching-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://nakisaahmadii.github.io/dog-matching-app",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-regular-svg-icons": "^6.7.2",
