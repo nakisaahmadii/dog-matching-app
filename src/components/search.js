@@ -24,6 +24,7 @@ export default function Search() {
     //Pagination state
     const [page, setPage] = useState(0);
     const [pageData, setPageData] = useState({ total: 0, next: null, prev: null });
+    const totalPages = Math.ceil(pageData.total / 10);
     //State for handling loading and errors
     const [errorMessage, setErrorMessage] = useState('');
     const [errOccurred, setErrOccurred] = useState(false);
@@ -75,7 +76,6 @@ export default function Search() {
     //Fetches dogs based on filters, sorting, and pagination
     useEffect(() => {
         const fetchDogsData = async () => {
-            setDogList([]);
             setIsLoading(true);
             const params = {
                 breeds: selectedBreed ? [selectedBreed] : [],
@@ -101,10 +101,14 @@ export default function Search() {
                     });
                     setErrOccurred(false);
                     fetchDogDetails(res.data.resultIds);
+                } else {
+                    setDogList([]);
+                    setPageData({ total: 0, next: null, prev: null });
                 }
             } catch (error) {
                 console.error('Error happened while fetching dogs data');
                 setErrOccurred(true);
+                setPageData({ total: 0, next: null, prev: null });
             } finally {
                 setIsLoading(false);
             }
@@ -267,7 +271,7 @@ export default function Search() {
                                 <button
                                     style={{ marginLeft: '10px', borderRadius: '5px' }}
                                     onClick={() => setPage(page + 1)}
-                                    disabled={!pageData.next || pageData.total <= dogList.length}>Next
+                                    disabled={page >= totalPages - 1 || pageData.total <= dogList.length}>Next
                                 </button>
                             </div>
                         </>}
