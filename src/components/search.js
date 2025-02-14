@@ -149,7 +149,7 @@ export default function Search() {
             const response = await axios.post('https://frontend-take-home-service.fetch.com/auth/logout', {}, { withCredentials: true });
             if (response.status === 200) {
                 setUser(null);
-                navigate('/');
+                navigate('/dog-matching-app');
             }
         } catch (error) {
             console.error('Logout Failed: ', error);
