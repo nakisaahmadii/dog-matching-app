@@ -267,7 +267,7 @@ export default function Search() {
                                 <button
                                     style={{ marginLeft: '10px', borderRadius: '5px' }}
                                     onClick={() => setPage(page + 1)}
-                                    disabled={!pageData.next}>Next
+                                    disabled={!pageData.next || pageData.total <= dogList.length}>Next
                                 </button>
                             </div>
                         </>}
