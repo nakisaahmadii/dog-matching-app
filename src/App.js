@@ -5,13 +5,12 @@ import Search from './components/search';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-
 function App() {
   return (
-    <div>
+    <div className='App'>
       <Routes>
-        <Route path='/'  element={<Login />} />
-        <Route path='/search' element={<Search />} />
+        <Route path='/'  element={<Login />} />  {/* Routs for the root path to render Login */}
+        <Route path='/search' element={<Search />} /> {/* Routs for '/search' path to render Search */}
       </Routes>
     </div>
   );

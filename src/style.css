@@ -4,7 +4,6 @@
     justify-content: center; 
     flex-wrap: wrap;
     height: 800px;
-   
 }
 
 .login-container {
@@ -23,13 +22,16 @@
     margin: 10px;
     padding: 10px;
     width: 200px;
-    
 }
 
 .logout-container {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    box-shadow: 3px 3px 20px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    background-color: #f4f4f4 ;
+    padding: 10px;
 }
 
 .form-label {
@@ -42,12 +44,6 @@
     background-color: #fcebea;
 }
 
-.title{
-    text-align: center;
-    color: #5e6c44d7;
-    margin-bottom: 50px;
-}
-
 .search-container{
     width: 80%;
     margin: auto;
@@ -55,10 +51,21 @@
 }
 
 .filters {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: flex-start;
+    align-content: center;
     align-items: center;
+}
+
+.filters select, .filters button {
+    padding: 5px;
+    margin: 0px 10px ;
+    border-radius: 5px;
+}
+
+.filters input {
+    margin: 0 10px 0 0;
 }
 
 .loading-container {
@@ -97,7 +104,7 @@ th, td {
 }
 
 th {
-    background-color: #dce6f8;
+    background-color: #cbcbcb;
     color: #333;
     font-weight: bold;
 }
@@ -108,18 +115,18 @@ tr:nth-child(even) {
 
 .error-message {
     color: #f44336;
-    margin: 0 0 0 50px;
+    margin: 0 0 0 80px;
     
 }
 
 input[type="text"],
 input[type="email"] {
-    width: 100%; /* Full width to make it responsive */
-    padding: 10px; /* Padding for better text visibility */
-    margin-bottom: 20px; /* Space between inputs */
-    border: 2px solid #ccc; /* Subtle border */
-    border-radius: 4px; /* Rounded corners */
-    box-sizing: border-box; /* Border-box model for proper width calculation */
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 20px;
+    border: 2px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
 }
 
 button {
@@ -132,8 +139,9 @@ button {
     cursor: pointer;
     transition: background-color 0.2s; /* Smooth transition for hover effect */
 }
+
 button:hover {
-    background-color: #0056b3;; /* Darker blue on hover */
+    background-color: #0056b3;;
 }
 
 button:disabled {
@@ -154,8 +162,8 @@ button:disabled {
 }
 
 .fixed-size-image {
-    width: 150px;  /* Fixed width */
-    height: 100px; /* Fixed height */
+    width: 150px;
+    height: 100px;
     object-fit: cover; /* This property makes sure the images cover the area without distortion */
 }
 
@@ -208,12 +216,6 @@ button:disabled {
     justify-content: center;
 }
 
-.filters select, .filters button {
-    padding: 8px;
-    margin-left: 10px;
-    border-radius: 5px;
-}
-  
 .user-button {
     background: none;
     border: none;
@@ -222,20 +224,17 @@ button:disabled {
     cursor: pointer;
 }
   
-  
 .logout-btn {
     color: #007bff;
     padding: 12px 16px;
     text-decoration: none;
     background-color: transparent;
-    
 }
   
 .logout-btn:hover {
     color: #0056b3;
     background-color: transparent;
 }
-
 
 body {
     margin: 0;

@@ -5,25 +5,29 @@ import axios from "axios";
 import '../style.css';
 
 export default function Login(){
+    //User context and authentication and navigation through pages
     const {setUser} = useUser();
+    const navigate = useNavigate();
+    //States to login using name and email
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    //State for errors
     const [errors, setErrors] = useState({name:false, email:false});
-    const navigate = useNavigate();
-
- 
+    
+    //Function to validate emails
     function validateEmail (email) {
         return email.match(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/);
     }
     
+    //Function to validate the name and email and login the user
     const handleLogin = async() => {
+        //Setting errors if the name or email is missing or unvalid
         let newErrors = {
             name: name.trim('') === '',
             email: email.trim('') === '' || !validateEmail(email)
-        }
-        
+        };
         setErrors(newErrors)
-        
+        //Avoiding the API call if there is an error with name or email
         if( newErrors.name || newErrors.email){
             return;
         }
@@ -31,14 +35,12 @@ export default function Login(){
             const res = await axios.post('https://frontend-take-home-service.fetch.com/auth/login', 
                 {name, email }, {withCredentials: true });
             if( res.status === 200){
-                setUser(name); //CHANGE THIS
-                navigate('/search');
+                setUser(name); //Set the name of the user to be passed to search page
+                navigate('/search'); //navigationg the user to search page
             }
         } catch (error) {
             console.error('Login Failed: ', error);
-            navigate('/search');
         }
-        
     };
 
     return(
